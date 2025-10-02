@@ -58,64 +58,25 @@ nav a:hover{
     font-weight: 700;
 }
 
-.imgCentral{
-    height: 70vh;
-}
-
-.imgCentral img{
-    min-width: 100%;
-    height: 100%;
-    filter: brightness(0.5);
-}
-
-.container-historia{
+.title-produtos{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    height: 40px;
     justify-content: center;
-    text-align: center;
-    padding: 20px;
-    gap: 30px;
-    height: 120px;
+    background-color: #4e060e;
+    color: white;
+    padding: 40px 0 20px 0;
+    font-size: x-large;
+}
+
+.container-produtos{
     background-color: #0B0909;
-    color: white;
-}
-
-#b1{
-    width: 180px;
-    height: 30px;
-    border-radius: 7px;
-    background-color: white;
-    color: #0b0909;
-    font-weight: 600;
-    transition: 0.5s;
-}
-
-#b1:hover{
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
-.kosh-destaques{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    gap: 20px;
-    background-color: #4e060e;
-    color: white;
-    background-image: linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%);
-}
-
-.container-destaques{
-    background-color: #4e060e;
     padding-bottom: 20px;
-    background-image: linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%);
 }
 
-.container-destaques section{
-    display: flex;
+.container-produtos section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -125,33 +86,14 @@ nav a:hover{
     
 }
 
-.container-destaques img{
+.produtos img{
     width: 85%;    
     min-height: 60vh;
     border-radius: 15px;
     box-shadow: 0 0 0 1px black;
 }
 
-.container-destaques .button{
-    display: flex;
-    justify-content: center;
-}
 
-#b2{
-    width: 170px;
-    height: 30px;
-    border-radius: 7px;
-    background-color: white;
-    color: #0b0909;
-    font-weight: 600;
-    user-select: none;
-    transition: 0.5s;
-}
-
-#b2:hover{
-    transform: scale(1.2);
-    transition: 0.5s;
-}
 
 .melhores-empresas{
     display: flex;
@@ -227,18 +169,4 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     gap: 20px;
-}
-
-.imglogo-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  
-}
-
-.imglogo-footer img{
-    max-width: 100%;
-    height: 70px;
-    transition: 0.5s;
 }
