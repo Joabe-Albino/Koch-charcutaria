@@ -58,7 +58,7 @@ nav a:hover{
     font-weight: 700;
 }
 
-.title-produtos{
+.title-revendas{
     display: flex;
     align-items: center;
     height: 40px;
@@ -69,37 +69,54 @@ nav a:hover{
     font-size: x-large;
 }
 
-.container-produtos{
+.container-revendas{
     background-color: #0B0909;
     padding-bottom: 20px;
 }
 
-.container-produtos section{
+.container-revendas section{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px;
-    gap: 20px;
+    gap: 50px;
     
 }
 
-.produtos img{
-    width: 85%;    
-    min-height: 60vh;
+.revendas{
+    display: flex;
+    background-color: rgb(177, 162, 162);
+    width: 90%;
+
+}
+.left-revendas{
+    
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    border-left: 1px solid black;
+}
+
+.left-revendas img{
+    width: 100%;    
+    max-height: 40vh;
     border-radius: 15px;
     box-shadow: 0 0 0 1px black;
 }
 
-.produtos{
-    transition: 0.5s;
-}
-
-.produtos:hover{
-    transform: scale(1.25);
-    transition: 0.5s;
+.descricao-revendas{
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    
+    
 }
 
 
