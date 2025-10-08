@@ -179,3 +179,9 @@ nav a:hover{
     align-items: center;
     gap: 20px;
 }
+.logo{
+    display: flex;
+    align-items: center;    
+    justify-content: flex-start;
+   margin-right: auto;
+}
