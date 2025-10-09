@@ -1,12 +1,12 @@
 import {defineField, defineType} from 'sanity'
 
 export const destaquesHomeType = defineType({
-  name: 'event',
-  title: 'Event',
+  name: 'destaquesHome',
+  title: 'Destaques_no_Home',
   type: 'document',
   fields: [
     defineField({
-      name: 'Endereço da imagem',
+      name: 'Endereco_da_imagem',
       type: 'string',
     }),
     defineField({
@@ -14,15 +14,15 @@ export const destaquesHomeType = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'Preço nominal',
-      type: 'double',
+      name: 'Preco_nominal',
+      type: 'number',
     }),
     defineField({
-      name: 'Percentual de desconto',
-      type: 'double',
+      name: 'Percentual_de_desconto',
+      type: 'number',
     }),
     defineField({
-      name: 'Endereço do produto',
+      name: 'Endereco_do_produto',
       type: 'string',
     }),
   ],

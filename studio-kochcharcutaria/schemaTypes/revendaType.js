@@ -1,20 +1,20 @@
 import {defineField, defineType} from 'sanity'
 
 export const revendaType = defineType({
-    name: 'event',
-    title: 'Event',
+    name: 'revenda',
+    title: 'Lojas_de_revenda',
     type: 'document',
     fields: [
         defineField({
-            name: 'Endereço da imagem',
+            name: 'Endereco_da_imagem',
             type: 'string',
         }),
         defineField({
-            name: 'Nome da empresa',
+            name: 'Nome_da_empresa',
             type: 'string',
         }),
         defineField({
-            name: 'Link embedded Google Maps',
+            name: 'Link_Google_Maps',
             type: 'string',
         }),
     ],
