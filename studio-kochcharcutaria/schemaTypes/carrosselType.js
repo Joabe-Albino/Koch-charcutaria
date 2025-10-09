@@ -1,16 +1,16 @@
 import {defineField, defineType} from 'sanity'
 
 export const carrosselType = defineType({
-  name: 'event',
-  title: 'Event',
+  name: 'carrossel',
+  title: 'Carrossel',
   type: 'document',
   fields: [
     defineField({
-      name: 'Endereço da imagem',
+      name: 'Endereco_da_imagem',
       type: 'string',
     }),
     defineField({
-      name: 'Endereço do produto',
+      name: 'Endereco_do_produto',
       type: 'string',
     }),
   ],

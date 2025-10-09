@@ -1,16 +1,16 @@
 import {defineField, defineType} from 'sanity'
 
 export const parceirosHomeType = defineType({
-  name: 'event',
-  title: 'Event',
+  name: 'parceirosHome',
+  title: 'Parceiros_no_Home',
   type: 'document',
   fields: [
     defineField({
-      name: 'Endereço da imagem',
+      name: 'Endereco_da_imagem',
       type: 'string',
     }),
     defineField({
-      name: 'Endereço da página do parceiro',
+      name: 'Endereco_da_pagina_do_parceiro',
       type: 'string',
     }),
   ],
