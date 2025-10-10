@@ -158,7 +158,6 @@ nav a:hover{
         linear-gradient(to top, black 0%, transparent 60%);
     background-blend-mode: multiply;
 }
-
 .footer-icons{
     display: flex;
     justify-content: center;

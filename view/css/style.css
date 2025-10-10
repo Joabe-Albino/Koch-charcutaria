@@ -128,16 +128,6 @@ nav a:hover{
     gap: 20px;
     
 }
-.container-destaques img{
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.container-destaques img:hover{
-    transform: scale(1.15);
-    filter: brightness(30%);
-    transition: 0.5s;
-}
 
 .container-destaques img{
     width: 85%;    
@@ -213,7 +203,6 @@ nav a:hover{
     user-select: none;
     transition: 0.5s;
 }
-
 #b3:hover{
     transform: scale(1.2);
     transition: 0.5s;
