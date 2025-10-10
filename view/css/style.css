@@ -256,3 +256,9 @@ nav a:hover{
     height: 70px;
     transition: 0.5s;
 }
+.logo{
+    display: flex;
+    align-items: center;    
+    justify-content: flex-start;
+   margin-right: auto;
+}
