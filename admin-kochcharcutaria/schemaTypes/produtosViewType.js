@@ -7,31 +7,38 @@ export const produtosViewType = defineType({
   fields: [
     defineField({
       name: 'Endereco_da_imagem',
-      type: 'string',
+      label: 'Endereço da imagem',
+      type: 'image',
     }),
     defineField({
       name: 'Nome_do_produto',
+      label: 'Nome do produto',
       type: 'string',
     }),
     defineField({
       name: 'Preco_do_produto',
+      label: 'Preço do produto',
       type: 'number',
     }),
     defineField({
       name: 'Percentual_de_desconto',
+      label: 'Percentual de desconto',
       type: 'number',
     }),
     defineField({
       name: 'Descricao',
+      label: 'Descrição',
       type: 'string',
     }),
     defineField({
       name: 'Link_do_produto',
-      type: 'string',
+      label: 'Link do produto',
+      type: 'url',
     }),
     defineField({
       name: 'Endereco_do_video',
-      type: 'string',
+      label: 'Endereço do vídeo',
+      type: 'url',
     }),
   ],
 })
