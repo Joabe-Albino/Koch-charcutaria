@@ -7,15 +7,18 @@ export const revendaType = defineType({
     fields: [
         defineField({
             name: 'Endereco_da_imagem',
-            type: 'string',
+            label: 'Endereço da imagem',
+            type: 'image',
         }),
         defineField({
             name: 'Nome_da_empresa',
+            label: 'Nome da empresa',
             type: 'string',
         }),
         defineField({
             name: 'Link_Google_Maps',
-            type: 'string',
+            label: 'Link Google Maps',
+            type: 'url',
         }),
     ],
 })

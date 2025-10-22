@@ -11,7 +11,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'Link_redirecionamento_para_o_Whatsapp',
-      type: 'string',
+      type: 'url',
     }),
     defineField({
       name: 'Instagram',
@@ -19,7 +19,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'Link_redirecionamento_para_o_Instagram',
-      type: 'string',
+      type: 'url',
     }),
     defineField({
       name: 'Facebook',
@@ -27,7 +27,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'Link_redirecionamento_para_o_Facebook',
-      type: 'string',
+      type: 'url',
     }),
     defineField({
       name: 'Email',
@@ -35,7 +35,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'Link_redirecionamento_para_o_Email',
-      type: 'string',
+      type: 'url',
     }),
   ],
 })

@@ -7,7 +7,8 @@ export const destaquesHomeType = defineType({
   fields: [
     defineField({
       name: 'Endereco_da_imagem',
-      type: 'string',
+      label: 'Endereço da imagem',
+      type: 'image',
     }),
     defineField({
       name: 'Nome',
@@ -15,15 +16,18 @@ export const destaquesHomeType = defineType({
     }),
     defineField({
       name: 'Preco_nominal',
+      label: 'Preço nominal',
       type: 'number',
     }),
     defineField({
       name: 'Percentual_de_desconto',
+      label: 'Percentual de desconto',
       type: 'number',
     }),
     defineField({
       name: 'Endereco_do_produto',
-      type: 'string',
+      label: 'Endereço do produto',
+      type: 'url',
     }),
   ],
 })
