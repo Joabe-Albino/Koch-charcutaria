@@ -134,6 +134,13 @@ nav a:hover{
     min-height: 60vh;
     border-radius: 15px;
     box-shadow: 0 0 0 1px black;
+    transition: 0.5s;
+}
+
+.container-destaques img:hover{
+    transform: scale(1.1);
+    opacity: 60%;
+
 }
 
 .container-destaques .button{
