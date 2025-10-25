@@ -1,18 +1,3 @@
-//  <div class="container-produtos">
-//         <section>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-//             <div class="produtos"><img src="../src/produtp.png" alt=""></div>
-            
-//         </section>
-//     </div>
-
-
 const body = document.body;
 
 const img = document.createElement("img");
