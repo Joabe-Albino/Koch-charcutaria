@@ -7,13 +7,11 @@ export const carrosselType = defineType({
   fields: [
     defineField({
       name: 'Endereco_da_imagem',
-      label: 'Endereço da imagem',
-      type: 'image',
+      type: 'string',
     }),
     defineField({
       name: 'Endereco_do_produto',
-      label: 'Endereço do produto',
-      type: 'url',
+      type: 'string',
     }),
   ],
 })
