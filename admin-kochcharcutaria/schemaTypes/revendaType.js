@@ -2,7 +2,8 @@ import {defineField, defineType} from 'sanity'
 
 export const revendaType = defineType({
     name: 'revenda',
-    title: 'Lojas_de_revenda',
+    title: 'revenda',
+    label: 'Lojas de revenda',
     type: 'document',
     fields: [
         defineField({
@@ -17,7 +18,7 @@ export const revendaType = defineType({
         }),
         defineField({
             name: 'Link_Google_Maps',
-            label: 'Link Google Maps',
+            label: 'Link Google Maps para embedding',
             type: 'url',
         }),
     ],

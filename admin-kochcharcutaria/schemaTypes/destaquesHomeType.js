@@ -2,7 +2,8 @@ import {defineField, defineType} from 'sanity'
 
 export const destaquesHomeType = defineType({
   name: 'destaquesHome',
-  title: 'Destaques_no_Home',
+  title: 'destaquesHome',
+  label: 'Carrossel de destaques Homepage',
   type: 'document',
   fields: [
     defineField({
