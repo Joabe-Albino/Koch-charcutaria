@@ -85,6 +85,11 @@ nav a:hover{
     color: white;
 }
 
+.container-historia a{
+    text-decoration: none;
+    color: black;
+}
+
 #b1{
     width: 180px;
     height: 30px;
