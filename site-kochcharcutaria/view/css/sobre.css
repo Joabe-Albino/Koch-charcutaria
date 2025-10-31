@@ -23,15 +23,19 @@ header section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background: url(../src/fundo-header.png) no-repeat center center / cover;
-    filter: brightness(0.7);
+    padding: 0 30px 0 20px;
+    background: url(../src/fundo-header.jpg) no-repeat center center / cover;
+    filter: brightness(0.6);
 }
 
 header input{
-    width: 15%;
-    height: 25px;
+    width: 25%;
+    height: 28px;
     border-radius: 15px;
+}
+
+.logo img{
+    width: 40%;
 }
 
 nav{
@@ -78,6 +82,12 @@ nav a:hover{
     line-height: 1.6;
     white-space: pre-wrap;
     background-image: linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%);
+}
+
+.container-sobre section{
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .img-sobre{
@@ -165,5 +175,56 @@ nav a:hover{
     gap: 20px;
 }
 
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s all;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
 
 
+.left{
+    transform: translateX(-100%);
+}
+
+.left.show{
+    transform: translateX(0);
+}
+
+
+.right{
+    transform: translateX(100%);
+}
+.right.show{
+    transform: translateX(0);
+}
+
+
+.up{
+    transform: translateY(100%);
+}
+.up.show{
+    transform: translateY(0);
+}
+
+
+.down{
+    transform: translateY(-100%);
+}
+.down.show{
+    transform: translateY(0);
+}
+
+
+.scale{
+    transform: scale(0.5);
+    filter: blur(5px) saturate(0)  contrast(4);
+}
+.scale.show{
+    transform: scale(1);
+    filter: none;
+}
