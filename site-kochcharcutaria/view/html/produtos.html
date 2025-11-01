@@ -22,6 +22,11 @@
             <input type="search" name="search" id="pesquisa" placeholder="Pesquisar...">
            
             
+
+            
+            <div class="redes">
+                <p>icone</p>
+            </div>
         </section>
 
         <nav>
@@ -35,7 +40,57 @@
 
      <div class="title-produtos"><h3>Produtos</h3></div>
 
-    <script src="../js/produtos.js"></script>
+    <div class="container-produtos">
+        <section>
+            
+        </section>
+    </div>
+
+    <script>
+        const URL = "https://wy2dx8kh.api.sanity.io/v2025-10-30/data/query/production?query=*%5B_type+%3D%3D+%22produtosViewType%22%5D%0A%7B%0A++Descricao%2C%0A++%22Imagem%22%3A+Endereco_da_imagem.asset-%3Eurl%0A%7D&perspective=published"
+        async function carregarProdutos() {
+            const response = await fetch(URL, {
+                method: "GET",
+            });
+
+            const json = await response.json();
+            const result = json.result;
+
+            const main = document.querySelector('.container-produtos');
+
+            for (let index = 0; index < result.length; index++) {
+                const element = result[index];
+                console.log(element);
+
+                const img = document.createElement("img");
+                img.src = element.Imagem;
+
+                const divProd = document.createElement("div");
+                divProd.classList.add("produtos");
+                divProd.append(img);
+
+                //const h2 = document.createElement("h2");
+                //h2.classList.add("card-title");
+                //h2.innerText = element.titulo;
+
+                //const p = document.createElement("p");
+                //p.classList.add("card-desc");
+                //p.innerText = element.descricao;
+
+                //const divConteudo = document.createElement("div");
+                //divConteudo.classList.add("card-body");
+                //divConteudo.append(h2, p);
+
+                //const article = document.createElement("article");
+                //article.classList.add("card");
+                //article.append(divImg, divConteudo);
+
+                main.append(divProd);
+            }
+        }
+
+        carregarProdutos();
+    </script>
    
 
     <div class="melhores-empresas"><h3>Estamos entre as melhores empresas do estado</h3></div>

@@ -1,8 +1,9 @@
 import {defineField, defineType} from 'sanity'
 
 export const produtosViewType = defineType({
-  name: 'produtosViewType',
-  title: 'Produtos_na_pagina_produtos',
+  name: 'produtosView',
+  title: 'produtosView',
+  label: 'Produtos da página produtos',
   type: 'document',
   fields: [
     defineField({
