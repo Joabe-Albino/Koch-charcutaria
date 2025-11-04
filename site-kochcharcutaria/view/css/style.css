@@ -203,8 +203,13 @@ nav a:hover{
 .container-empresas .button{
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    color:black;
 }
-
+.container-empresas .linkzap{
+    text-decoration: none;
+    color:black
+}
 #b3{
     width: 170px;
     height: 30px;
