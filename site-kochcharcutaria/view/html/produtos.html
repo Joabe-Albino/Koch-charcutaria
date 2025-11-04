@@ -41,9 +41,7 @@
      <div class="title-produtos"><h3>Produtos</h3></div>
 
     <div class="container-produtos">
-        <section>
-            
-        </section>
+        
     </div>
 
     <script>
@@ -58,6 +56,9 @@
 
             const main = document.querySelector('.container-produtos');
 
+            const sectionProd = document.createElement("section");
+            
+
             for (let index = 0; index < result.length; index++) {
                 const element = result[index];
                 console.log(element);
@@ -68,6 +69,8 @@
                 const divProd = document.createElement("div");
                 divProd.classList.add("produtos");
                 divProd.append(img);
+
+                sectionProd.append(divProd);
 
                 //const h2 = document.createElement("h2");
                 //h2.classList.add("card-title");
@@ -85,7 +88,7 @@
                 //article.classList.add("card");
                 //article.append(divImg, divConteudo);
 
-                main.append(divProd);
+                main.append(sectionProd);
             }
         }
 

@@ -14,4 +14,4 @@ function moverSlide() {
 }
 
 
-setInterval(moverSlide, 4000);
+setInterval(moverSlide, 6000);

@@ -82,7 +82,6 @@ nav a:hover{
 .slide{
     position: relative;
     box-sizing: border-box;
-    
 }
 
 .slide img{
@@ -91,6 +90,13 @@ nav a:hover{
     
 }
 
+.slide video{
+    position: relative;
+    bottom: 10rem;
+    width: 100rem;
+    max-height: 125vh;
+    
+}
 
 .container-historia{
     display: flex;
