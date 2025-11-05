@@ -228,3 +228,11 @@ nav a:hover{
     transform: scale(1);
     filter: none;
 }
+.logo{
+    display: flex;
+    align-items: center;    
+    justify-content: flex-start;
+   margin-right: auto;
+}
+
+

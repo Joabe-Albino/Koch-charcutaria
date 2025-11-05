@@ -209,3 +209,10 @@ nav a:hover {
     padding: 15px;
     text-align: center;
 }
+
+.logo{
+    display: flex;
+    align-items: center;    
+    justify-content: flex-start;
+   margin-right: auto;
+}

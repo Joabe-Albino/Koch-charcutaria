@@ -111,6 +111,11 @@ nav a:hover{
     color: white;
 }
 
+.container-historia a{
+    text-decoration: none;
+    color: black;
+}
+
 #b1{
     width: 180px;
     height: 30px;
@@ -224,8 +229,13 @@ nav a:hover{
 .container-empresas .button{
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    color:black;
 }
-
+.container-empresas .linkzap{
+    text-decoration: none;
+    color:black
+}
 #b3{
     width: 170px;
     height: 30px;
@@ -277,34 +287,4 @@ nav a:hover{
     max-width: 100%;
     height: 70px;
     transition: 0.5s;
-}
-
-/*--------------------------------------- PARTE DE ANIMAÇÕES NOSSAS ---------------------------------------------------*/
-
-.hidden{
-    opacity: 0;
-    transition: all 1s;
-}
-
-.show{
-    opacity: 1;
-    filter: blur(0);
-}
-
-
-
-.right.show{
-    transform: translateX(0);
-}
-
-.left.show{
-    transform: translateX(0);
-}
-
-.left{
-    transform: translateX(200px);
-}
-
-.right{
-    transform: translateX(-100%);
 }
