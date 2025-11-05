@@ -288,3 +288,33 @@ nav a:hover{
     height: 70px;
     transition: 0.5s;
 }
+
+/*--------------------------------------- PARTE DE ANIMAÇÕES NOSSAS ---------------------------------------------------*/
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+
+.right.show{
+    transform: translateX(0);
+}
+
+.left.show{
+    transform: translateX(0);
+}
+
+.left{
+    transform: translateX(200px);
+}
+
+.right{
+    transform: translateX(-100%);
+}

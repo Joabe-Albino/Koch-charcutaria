@@ -97,10 +97,17 @@ nav a:hover{
 
 .revendas{
     display: flex;
+    flex-direction: column;
     background-color: rgb(177, 162, 162);
     width: 90%;
+    padding: 10px;
+    border-radius: 15px;
 
-}
+    & p{
+        white-space-collapse: preserve-breaks;
+        text-decoration: underline;
+    }
+}   
 .left-revendas{
     
     width: 50%;
