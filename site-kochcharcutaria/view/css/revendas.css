@@ -75,7 +75,7 @@ nav a:hover{
 
 .container-revendas{
     background-color: #0B0909;
-    padding-bottom: 20px;
+    padding: 20px;
 
     & iframe{
         width: 100%;
