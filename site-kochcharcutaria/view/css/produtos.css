@@ -138,15 +138,7 @@ nav a:hover{
     color: white;
 }
 
-@media (max-width: 1080px) {
-    .melhores-empresas{
-    text-align: center;
-    display: flex;
-    height: 40%;
-    background-color: #0B0909;
-    color: white;
-    }
-}
+
 .container-empresas{
     background-color: #0B0909;
     padding-bottom: 20px;
@@ -172,6 +164,22 @@ nav a:hover{
 .container-empresas .button{
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1080px) {
+    .melhores-empresas{
+    text-align: center;
+    display: flex;
+    height: 40%;
+    background-color: #0B0909;
+    color: white;
+    }
+    .container-empresas .empresa{
+    background: #D9D9D9;
+    max-width: 15vh;
+    height: 7vh;
+    border-radius: 10px;
+    }
 }
 
 #b3{
