@@ -236,29 +236,28 @@ nav a:hover{
 
  @media screen and (max-width: 1080px) {
          p {
-    font-size: 1.9vh; /* 18px ≈ 1.9vh */
+    font-size: 1.9vh; 
 }
 
 .title-sobre h3 {
-    font-size: 4.2vh; /* 40px ≈ 4.2vh */
+    font-size: 4.2vh; 
 }
 
 .imagi {
-    height: 35.4vh; /* 340px ≈ 35.4vh */
-    width: 20.8vh;  /* 200px ≈ 20.8vh */
-}
+    height: 35.4vh; 
+    width: 20.8vh;  
 
 #fernando {
-    width: 45vh;    /* 433px ≈ 45vh */
-    height: 45.6vh; /* 438px ≈ 45.6vh */
+    width: 45vh;    
+    height: 45.6vh; 
 }
 
 nav {
-    height: 7.3vh;  /* 70px ≈ 7.3vh */
+    height: 7.3vh; 
 }
 
 #nav a {
-    font-size: 2.6vh; /* 25px ≈ 2.6vh */
+    font-size: 2.6vh; 
 }
 
     }
@@ -277,4 +276,5 @@ nav {
     height: 6vh;
     border-radius: 10px;
     }
+}
 }
