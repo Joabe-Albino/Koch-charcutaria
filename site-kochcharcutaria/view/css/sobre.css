@@ -174,6 +174,15 @@ nav a:hover{
     gap: 20px;
 }
 
+.imglogo-footer img{
+    width: 70px;
+    height: 70px;
+}
+.imglogo-footer{
+    width: 70px;
+    height: 70px;
+}
+
 .hidden{
     opacity: 0;
     filter: blur(5px);
@@ -234,22 +243,23 @@ nav a:hover{
    margin-right: auto;
 }
 
- @media screen and (max-width: 1080px) {
-         p {
-    font-size: 1.9vh; 
+ @media(max-width: 1080px) {    
+    p{
+    font-size: 1.3vh; 
 }
+.imagi {
+    height: 35.4vh; 
+    width: 20.8vh;      
+}
+  }
 
 .title-sobre h3 {
     font-size: 4.2vh; 
 }
 
-.imagi {
-    height: 35.4vh; 
-    width: 20.8vh;  
-
 #fernando {
-    width: 45vh;    
-    height: 45.6vh; 
+    width: 35vh;    
+    height: 35.6vh; 
 }
 
 nav {
@@ -260,13 +270,20 @@ nav {
     font-size: 2.6vh; 
 }
 
-    }
-  
-    @media (max-width: 1080px) {
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.container-sobre{
+    padding: 20px;
+}
+
+  @media (max-width: 1080px) {
     .melhores-empresas{
     text-align: center;
     display: flex;
-    height: 40%;
+    min-height: 40%;
     background-color: #0B0909;
     color: white;
     }
@@ -276,5 +293,12 @@ nav {
     height: 6vh;
     border-radius: 10px;
     }
-}
+    .imglogo-footer img{
+        width: 12vh;
+        height: 12.6vh;
+    }
+    .imglogo-footer{
+        width: 12vh;
+        height: 12.6vh;
+    }
 }
