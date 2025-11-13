@@ -36,18 +36,29 @@
         <div class="produto">
             <div class="info-produto">
                 <div class="img-produto">
-                    <img src="../src/produtp.png" alt="Imagem do Produto 1" width="275">
+                    <img id="imgProduto" alt="Imagem do Produto" width="275">
                 </div>
                 <div class="infos">
-                    <h2><u>Linguiça defumada</u></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia excepturi aperiam, earum aspernatur iusto provident ad laborum nesciunt cum veniam suscipit perspiciatis, ullam blanditiis. Esse omnis consequuntur consequatur fugit illo.</p>
-                    <span class="valor-produto">R$ 00,00</span>
+                    <h2 id="nomeProduto"><u></u></h2>
+                    <p id="descricaoProduto"></p>
+                    <span id="valorProduto" class="valor-produto">R$ 00,00</span>
 
                     <div class="btns">
                         <input type="submit" value="Comprar" class="btn-comprar">
                     </div>
                 </div>
             </div>
+
+            <script>
+                const produto = JSON.parse(localStorage.getItem("produtoSelecionado"));
+
+                if(produto){
+                    document.getElementById("imgProduto").src = produto.Imagem;
+                    document.getElementById("nomeProduto").innerHTML = produto.Nome;
+                    document.getElementById("descricaoProduto").innerHTML = produto.Descricao;
+                    document.getElementById("valorProduto").innerHTML = produto.Valor;
+                }
+            </script>
 
             
             <div class="empty"></div>
