@@ -162,10 +162,7 @@ nav a:hover {
     height: auto;
     background-color: #4e060e;
     color: white;
-    background-image:
-        linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%),
-        linear-gradient(to top, black 0%, transparent 60%);
-    background-blend-mode: multiply;
+    background-image: linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%);
 }
 .footer-icons{
     display: flex;
