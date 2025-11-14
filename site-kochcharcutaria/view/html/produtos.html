@@ -44,7 +44,7 @@
             });
 
             const json = await response.json();
-            const result = json.result;
+            const result = json.result; 
 
             const main = document.querySelector('.container-produtos');
 
@@ -62,23 +62,12 @@
                 divProd.classList.add("produtos");
                 divProd.append(img);
 
+                divProd.addEventListener("click", () => {
+                    localStorage.setItem("produtoSelecionado", JSON.stringify(element));
+                    window.location.href = "./acessoProduto.html";
+                })
+
                 sectionProd.append(divProd);
-
-                //const h2 = document.createElement("h2");
-                //h2.classList.add("card-title");
-                //h2.innerText = element.titulo;
-
-                //const p = document.createElement("p");
-                //p.classList.add("card-desc");
-                //p.innerText = element.descricao;
-
-                //const divConteudo = document.createElement("div");
-                //divConteudo.classList.add("card-body");
-                //divConteudo.append(h2, p);
-
-                //const article = document.createElement("article");
-                //article.classList.add("card");
-                //article.append(divImg, divConteudo);
 
                 main.append(sectionProd);
             }
