@@ -1,19 +1,23 @@
 import {defineField, defineType} from 'sanity'
 
 export const carrosselType = defineType({
-  name: 'carrossel',
-  title: 'carrossel',
-  label: 'Carrossel',
+  name: 'carrosselType',
+  title: 'Carrossel',
   type: 'document',
   fields: [
     defineField({
-      name: 'Endereco_da_imagem',
-      label: 'Endereço da imagem',
-      type: 'image',
+      name: 'Nome',
+      title: 'Nome',
+      type: 'string',
+    }),
+    defineField({
+      name: 'Imagem_video',
+      title: 'Imagem PNG ou vídeo MP4',
+      type: 'file',
     }),
     defineField({
       name: 'Endereco_do_produto',
-      label: 'Endereço do produto',
+      title: 'Endereço do produto',
       type: 'url',
     }),
   ],
