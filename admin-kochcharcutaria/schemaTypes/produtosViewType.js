@@ -1,44 +1,43 @@
 import {defineField, defineType} from 'sanity'
 
 export const produtosViewType = defineType({
-  name: 'produtosView',
-  title: 'produtosView',
-  label: 'Produtos da página produtos',
+  name: 'produtosViewType',
+  title: 'Produtos',
   type: 'document',
   fields: [
     defineField({
       name: 'Endereco_da_imagem',
-      label: 'Endereço da imagem',
+      title: 'Endereço da imagem',
       type: 'image',
     }),
     defineField({
       name: 'Nome_do_produto',
-      label: 'Nome do produto',
+      title: 'Nome do produto',
       type: 'string',
     }),
     defineField({
       name: 'Preco_do_produto',
-      label: 'Preço do produto',
+      title: 'Preço do produto',
       type: 'number',
     }),
     defineField({
       name: 'Percentual_de_desconto',
-      label: 'Percentual de desconto',
+      title: 'Percentual de desconto',
       type: 'number',
     }),
     defineField({
       name: 'Descricao',
-      label: 'Descrição',
+      title: 'Descrição',
       type: 'string',
     }),
     defineField({
       name: 'Link_do_produto',
-      label: 'Link do produto',
+      title: 'Link do produto',
       type: 'url',
     }),
     defineField({
       name: 'Endereco_do_video',
-      label: 'Endereço do vídeo',
+      title: 'Endereço do vídeo',
       type: 'url',
     }),
   ],

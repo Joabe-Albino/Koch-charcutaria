@@ -1,19 +1,18 @@
 import {defineField, defineType} from 'sanity'
 
 export const infoType = defineType({
-  name: 'info',
-  title: 'informacoes',
-  label: 'Informações',
+  name: 'infoType',
+  title: 'Informações',
   type: 'document',
   fields: [
     defineField({
       name: 'NumeroWhatsapp',
-      label: 'Número do Whatsapp',
+      title: 'Número do Whatsapp',
       type: 'string',
     }),
     defineField({
       name: 'LinkWhatsapp',
-      label: 'Link do Whatsapp',
+      title: 'Link do Whatsapp',
       type: 'url',
     }),
     defineField({
@@ -22,7 +21,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'LinkInstagram',
-      label: 'Link do Instagram',
+      title: 'Link do Instagram',
       type: 'url',
     }),
     defineField({
@@ -31,7 +30,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'LinkFacebook',
-      label: 'Link do Facebook',
+      title: 'Link do Facebook',
       type: 'url',
     }),
     defineField({
@@ -40,7 +39,7 @@ export const infoType = defineType({
     }),
     defineField({
       name: 'LinkEmail',
-      label: 'Link para o Email',
+      title: 'Link para o Email',
       type: 'url',
     }),
   ],
