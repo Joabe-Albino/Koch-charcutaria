@@ -93,6 +93,11 @@ nav a:hover {
     border-radius: 15px;
 }
 
+.produto img{
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+
 .info-produto {
     display: flex;
     width: 100%;
