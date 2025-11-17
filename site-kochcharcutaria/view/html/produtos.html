@@ -19,16 +19,6 @@
                 <img src="../src/logo.png" alt="Logo kosh charcutaria" class="logo_img">
             </a>
             </div>
-            
-            
-            <input type="search" name="search" id="pesquisa" placeholder="Pesquisar...">
-           
-            
-
-            
-            <div class="redes">
-                <p>icone</p>
-            </div>
         </section>
 
         <nav>
@@ -47,7 +37,7 @@
     </div>
 
     <script>
-        const URL = "https://wy2dx8kh.api.sanity.io/v2025-10-30/data/query/production?query=*%5B_type+%3D%3D+%22produtosViewType%22%5D%0A%7B%0A++Descricao%2C%0A++%22Imagem%22%3A+Endereco_da_imagem.asset-%3Eurl%0A%7D&perspective=published"
+        const URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*%5B_type+%3D%3D+%22produtosViewType%22%5D%7B%0A++Descricao%2C%0A++%22Endereco_da_imagem%22%3A+Endereco_da_imagem.asset-%3Eurl%2C%0A++Link_do_produto%2C%0A++Nome_do_produto%2C%0A++Percentual_de_desconto%2C%0A++Preco_do_produto%0A%7D&perspective=drafts"
         async function carregarProdutos() {
             const response = await fetch(URL, {
                 method: "GET",
@@ -61,34 +51,22 @@
             const sectionProd = document.createElement("section");
             
 
-            for (let index = 0; index < result.length; index++) {
-                const element = result[index];
+            for (let element of result) {
                 console.log(element);
 
                 const img = document.createElement("img");
-                img.src = element.Imagem;
+                img.src = element.Endereco_da_imagem;
 
                 const divProd = document.createElement("div");
                 divProd.classList.add("produtos");
                 divProd.append(img);
 
+                divProd.addEventListener("click", () => {
+                    localStorage.setItem("produtoSelecionado", JSON.stringify(element));
+                    window.location.href = "./acessoProduto.html";
+                })
+
                 sectionProd.append(divProd);
-
-                //const h2 = document.createElement("h2");
-                //h2.classList.add("card-title");
-                //h2.innerText = element.titulo;
-
-                //const p = document.createElement("p");
-                //p.classList.add("card-desc");
-                //p.innerText = element.descricao;
-
-                //const divConteudo = document.createElement("div");
-                //divConteudo.classList.add("card-body");
-                //divConteudo.append(h2, p);
-
-                //const article = document.createElement("article");
-                //article.classList.add("card");
-                //article.append(divImg, divConteudo);
 
                 main.append(sectionProd);
             }
@@ -120,7 +98,7 @@
                     <p>(45) 99999-999</p> 
                     <p>Email: koshcharcutaria@gmail.com</p>
             <div class="footer-icons">
-            <img src="../src/footer_zap.png"> <img src="#"> <img src="#">
+            <img src="../src/footer_zap.png"> <img src="../src/footer_insta.png"> <img src="../src/footer_face.png">
             </div>
         </div>
     </footer>

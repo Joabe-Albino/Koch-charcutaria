@@ -21,7 +21,6 @@ button{
 
 header section{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 30px 0 20px;
     background: url(../src/fundo-header.jpg) no-repeat center center / cover;
@@ -37,6 +36,7 @@ header input{
 .logo img{
     width: 40%;
 }
+
 
 nav{
     display: flex;
@@ -97,6 +97,47 @@ nav a:hover{
     box-shadow: 0 0 0 1px black;
 }
 
+/*Caso for mobile*/
+@media (max-width: 1080px){
+    .produtos img{
+    max-width: 100%;    
+    min-height: 20vh;
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px black;
+    }
+
+    .container-produtos section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+    }
+}
+
+@media (max-width: 1080px){
+    .produtos img{
+    max-width: 100%;    
+    min-height: 20vh;
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px black;
+    }
+
+    .container-produtos section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+    }
+}
+
 .produtos{
     transition: 0.5s;
 }
@@ -116,6 +157,7 @@ nav a:hover{
     background-color: #0B0909;
     color: white;
 }
+
 
 .container-empresas{
     background-color: #0B0909;
@@ -144,6 +186,22 @@ nav a:hover{
     justify-content: center;
 }
 
+@media (max-width: 1080px) {
+    .melhores-empresas{
+    text-align: center;
+    display: flex;
+    height: 40%;
+    background-color: #0B0909;
+    color: white;
+    }
+    .container-empresas .empresa{
+    background: #D9D9D9;
+    max-width: 15vh;
+    height: 7vh;
+    border-radius: 10px;
+    }
+}
+
 #b3{
     width: 170px;
     height: 30px;
@@ -170,10 +228,7 @@ nav a:hover{
     height: auto;
     background-color: #4e060e;
     color: white;
-    background-image:
-        linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%),
-        linear-gradient(to top, black 0%, transparent 60%);
-    background-blend-mode: multiply;
+    background-image: linear-gradient(to right, black 0%, #4e060e 10%, #4e060e 90%, black 100%);
 }
 
 .footer-icons{
@@ -182,9 +237,17 @@ nav a:hover{
     align-items: center;
     gap: 20px;
 }
-.logo{
+
+.imglogo-footer{
     display: flex;
-    align-items: center;    
-    justify-content: flex-start;
-   margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+}
+
+.imglogo-footer img{
+    max-width: 100%;
+    height: 70px;
+    transition: 0.5s;
 }
