@@ -12,13 +12,13 @@ export const carrosselType = defineType({
     }),
     defineField({
       name: 'Imagem_video',
-      title: 'Imagem PNG ou vídeo MP4',
+      title: 'Imagem (PNG/JPEG) ou vídeo (MP4)',
       type: 'file',
     }),
     defineField({
-      name: 'Endereco_do_produto',
-      title: 'Endereço do produto',
-      type: 'url',
+      name: 'Ordem',
+      title: 'Prioridade de mostragem (crescente, decimal)',
+      type: 'number',
     }),
   ],
 })

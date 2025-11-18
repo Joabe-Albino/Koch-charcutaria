@@ -32,13 +32,61 @@
     </header>
 
     <div class="imgCentral">
-        <div class="slides">
-            <div class="slide"><img src="../src/imagem-carrosel.png" alt=""></div>
-            <div class="slide"><video src="../src/vidCarrosel1.mp4" autoplay loop muted></video></div>
-            <div class="slide"><img src="../src/imagem-carrosel.png" alt=""></div>
-            <div class="slide"><video src="../src/vidCarrosel2.mp4" autoplay loop muted></video></div>
-        </div>
+
     </div>
+
+    <script>
+
+        const URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*%5B_type+%3D%3D+%22carrosselType%22%5D+%7C+order%28Ordem+asc%29%0A%7B%0A++Nome%2C%0A++%22Imagem_video%22%3A+Imagem_video.asset-%3Eurl%2C%0A%7D+&perspective=drafts"
+        async function carregarCarrossel() {
+            const response = await fetch(URL, {
+                method: "GET",
+            });
+
+            const json = await response.json();
+            const result = json.result;
+
+            const main = document.querySelector('.imgCentral');
+            const divSlides = document.createElement("div");
+            divSlides.classList.add("slides");
+
+            for (let element of result) {
+                console.log(element);
+
+                const img = document.createElement("img");
+                img.src = element.Endereco_da_imagem;
+
+                const displayUrl = element.Imagem_video;
+
+                let display;
+
+                if (displayUrl.includes(".mp4")){
+                    display = document.createElement("video");
+                    display.autoplay = true;
+                    display.loop = true;
+                    display.muted = true;
+                } else if (displayUrl.includes(".jpg") || displayUrl.includes(".jpeg") || displayUrl.includes(".png")){
+                    display = document.createElement("img");
+                    img.setAttribute("alt", "");
+                } else {
+                    throw new Error("Tipo de arquivo desconhecido na função carregarCarrossel");
+                }
+
+                display.src = displayUrl;
+
+                const divCard = document.createElement("div");
+                divCard.classList.add("slide");
+                divCard.append(display);
+
+                divSlides.append(divCard);
+
+                main.append(divSlides);
+            }
+        }
+
+        carregarCarrossel();
+
+    </script>
     
     <div class="container-historia">
         <div><h3>Kosh Charcutaria</h3></div>
