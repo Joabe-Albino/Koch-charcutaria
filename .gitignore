@@ -1,0 +1,57 @@
+# ================================
+# DEPENDÊNCIAS
+# ================================
+node_modules/
+.pnp/
+.pnp.js
+
+# ================================
+# SANITY
+# ================================
+# Build gerado pelo sanity build
+dist/
+
+# Ambiente temporário criado pelo Sanity CLI
+.sanity/
+.cache/
+
+# Se existir um diretório duplicado com nome parecido
+dis/
+
+# ================================
+# VERCEL
+# ================================
+.vercel/
+
+# ================================
+# LOGS
+# ================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ================================
+# COBERTURA (tests)
+# ================================
+coverage/
+
+# ================================
+# VARIÁVEIS DE AMBIENTE
+# ================================
+.env
+.env.* 
+*.local
+
+# ================================
+# MISC
+# ================================
+.DS_Store
+*.pem
+
+# ================================
+# TYPESCRIPT
+# ================================
+*.tsbuildinfo
