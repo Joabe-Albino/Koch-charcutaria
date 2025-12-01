@@ -36,13 +36,10 @@
     </div>
 
     <script>
+        const URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*[_type == 'carrosselType'] | order(Ordem asc){Nome, 'Imagem_video': Imagem_video.asset->url}&perspective=drafts";
 
-        const URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*%5B_type+%3D%3D+%22carrosselType%22%5D+%7C+order%28Ordem+asc%29%0A%7B%0A++Nome%2C%0A++%22Imagem_video%22%3A+Imagem_video.asset-%3Eurl%2C%0A%7D+&perspective=drafts"
         async function carregarCarrossel() {
-            const response = await fetch(URL, {
-                method: "GET",
-            });
-
+            const response = await fetch(URL);
             const json = await response.json();
             const result = json.result;
 
@@ -51,25 +48,19 @@
             divSlides.classList.add("slides");
 
             for (let element of result) {
-                console.log(element);
-
-                const img = document.createElement("img");
-                img.src = element.Endereco_da_imagem;
-
                 const displayUrl = element.Imagem_video;
-
                 let display;
 
-                if (displayUrl.includes(".mp4")){
+                if (displayUrl.includes(".mp4")) {
                     display = document.createElement("video");
                     display.autoplay = true;
                     display.loop = true;
                     display.muted = true;
-                } else if (displayUrl.includes(".jpg") || displayUrl.includes(".jpeg") || displayUrl.includes(".png")){
+                } else if (displayUrl.match(/\.(jpg|jpeg|png)$/)) {
                     display = document.createElement("img");
-                    img.setAttribute("alt", "");
+                    display.setAttribute("alt", element.Nome || "");
                 } else {
-                    throw new Error("Tipo de arquivo desconhecido na função carregarCarrossel");
+                    continue;
                 }
 
                 display.src = displayUrl;
@@ -79,13 +70,21 @@
                 divCard.append(display);
 
                 divSlides.append(divCard);
-
-                main.append(divSlides);
             }
+
+            main.append(divSlides);
+
+            // 🔄 Lógica de transição automática
+            let currentIndex = 0;
+            const totalSlides = divSlides.children.length;
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                divSlides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 4000); // troca a cada 4 segundos
         }
 
         carregarCarrossel();
-
     </script>
     
     <div class="container-historia">
@@ -110,19 +109,41 @@
 
     <div class="container-empresas">
         <section class="hidden down">
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
         </section>
         <div class="button">
             
             <button id="b3"><a class="linkzap" href="https://wa.me/message/W3JXAKCDPQPCE1"> Entre em contato!</button></div></a>
     </div>
-        
+
+    <script>
+        const PARCEIROS_URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*[_type == 'parceirosHomeType']{ 'imgUrl': Endereco_da_imagem.asset->url }&perspective=drafts";
+
+        async function carregarEmpresas() {
+            const response = await fetch(PARCEIROS_URL);
+            const json = await response.json();
+            const result = json.result;
+
+            const section = document.querySelector(".container-empresas section");
+            section.innerHTML = "";
+
+            for (let element of result) {
+                const divEmpresa = document.createElement("div");
+                divEmpresa.classList.add("empresa");
+
+                const img = document.createElement("img");
+                img.src = element.imgUrl;
+                img.alt = "Parceiro";
+
+                divEmpresa.appendChild(img);
+                section.appendChild(divEmpresa);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", carregarEmpresas);
+
+    </script>
+
+
 
     <footer>
         <div class="footer-content">
@@ -136,6 +157,6 @@
     </footer>
     
 
-    <script src="../js/script.js"></script>
+
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sobre.css">
     <script defer src="../js/app.js"></script>
     <title>Kosh Charcutaria</title>
@@ -84,22 +85,45 @@
         </div>
         
     </div>
-   
+
 
     <div class="melhores-empresas"><h3>Estamos entre as melhores empresas do estado</h3></div>
 
     <div class="container-empresas">
-        <section>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
-            <div class="empresa"><img src="" alt=""></div>
+        <section class="hidden down">
         </section>
-        <div class="button"><button id="b3">Entre em contato!</button></div>
+        <div class="button">
+
+            <button id="b3"><a class="linkzap" href="https://wa.me/message/W3JXAKCDPQPCE1"> Entre em contato!</button></div></a>
     </div>
+
+    <script>
+        const PARCEIROS_URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*[_type == 'parceirosHomeType']{ 'imgUrl': Endereco_da_imagem.asset->url }&perspective=drafts";
+
+        async function carregarEmpresas() {
+            const response = await fetch(PARCEIROS_URL);
+            const json = await response.json();
+            const result = json.result;
+
+            const section = document.querySelector(".container-empresas section");
+            section.innerHTML = "";
+
+            for (let element of result) {
+                const divEmpresa = document.createElement("div");
+                divEmpresa.classList.add("empresa");
+
+                const img = document.createElement("img");
+                img.src = element.imgUrl;
+                img.alt = "Parceiro";
+
+                divEmpresa.appendChild(img);
+                section.appendChild(divEmpresa);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", carregarEmpresas);
+
+    </script>
         
 
     <footer>
