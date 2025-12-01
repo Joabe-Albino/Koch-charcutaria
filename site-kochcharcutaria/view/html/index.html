@@ -94,17 +94,37 @@
 
     <div class="kosh-destaques"><h3>Destaques da semana</h3></div>
     <div class="container-destaques">
-        <section class="hidden right">
-            <div><img src="../src/produtp.png" alt=""></div>
-            <div><img src="../src/produtp.png" alt=""></div>
-            <div><img src="../src/produtp.png" alt=""></div>
-            <div><img src="../src/produtp.png" alt=""></div>
+        <section class="hidden right" id="destaques-section">
         </section>
-        <div class="button"><a href="../html/produtos.html"><button id="b2">Ver todos os produtos</button></a></button></div>
+        <div class="button">
+            <a href="../html/produtos.html"><button id="b2">Ver todos os produtos</button></a>
+        </div>
     </div>
 
+    <script>
+        const DESTAQUES_URL = "https://wy2dx8kh.api.sanity.io/v2025-12-01/data/query/production?query=*[_type == 'produtosViewType']{ 'Endereco_da_imagem': Endereco_da_imagem.asset->url }&perspective=drafts";
 
-    
+        async function carregarDestaques() {
+            const response = await fetch(DESTAQUES_URL);
+            const json = await response.json();
+            const result = json.result;
+
+            const section = document.getElementById("destaques-section");
+            section.innerHTML = "";
+
+            result.slice(0,4).forEach(item => {
+                const div = document.createElement("div");
+                const img = document.createElement("img");
+                img.src = item.Endereco_da_imagem;
+                img.alt = "Produto em destaque";
+                div.appendChild(img);
+                section.appendChild(div);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", carregarDestaques);
+    </script>
+
     <div class="melhores-empresas"><h3>Estamos entre as melhores empresas do estado</h3></div>
 
     <div class="container-empresas">
