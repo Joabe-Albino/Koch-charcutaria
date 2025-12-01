@@ -39,19 +39,36 @@
     <script>
         const URL = "https://wy2dx8kh.api.sanity.io/v2025-11-17/data/query/production?query=*%5B_type+%3D%3D+%22produtosViewType%22%5D%7B%0A++Descricao%2C%0A++%22Endereco_da_imagem%22%3A+Endereco_da_imagem.asset-%3Eurl%2C%0A++Link_do_produto%2C%0A++Nome_do_produto%2C%0A++Percentual_de_desconto%2C%0A++Preco_do_produto%0A%7D&perspective=drafts"
         async function carregarProdutos() {
-            const response = await fetch(URL, {
-                method: "GET",
-            });
-
-            const json = await response.json();
-            const result = json.result;
 
             const main = document.querySelector('.container-produtos');
-
             const sectionProd = document.createElement("section");
+
+          
+            let produtosCache = localStorage.getItem("produtosCache");
+            if(produtosCache){
+                console.log("Carregando os produtos...");
+                produtosCache = JSON.parse(produtosCache);
+                renderProdutos(produtosCache, sectionProd, main);   
+                return;
+            }
+            
+            
+            
+            console.log("Pegando da API");
+            const response = await fetch(URL);
+            const json = await response.json();
+            const result = json.result;
+            renderProdutos(result, sectionProd, main);
+
+            localStorage.setItem("produtosCache", JSON.stringify(result));
+            console.log("Produtos foram salvos no cache");
             
 
-            for (let element of result) {
+        }
+
+        function renderProdutos(produtos, sectionProd, main){
+
+            for (let element of produtos) {
                 console.log(element);
 
                 const img = document.createElement("img");
@@ -67,9 +84,9 @@
                 })
 
                 sectionProd.append(divProd);
-
-                main.append(sectionProd);
             }
+
+            main.append(sectionProd);
         }
 
         carregarProdutos();
